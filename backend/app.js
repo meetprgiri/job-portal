@@ -13,11 +13,9 @@ import punycode from "punycode";
 const app = express();
 config({ path: "./config/config.env" });
 
-app.options("*", cors());
-
 app.use(
   cors({
-    origin: [process.env.FRONTEND_URL_VERCEL],
+    origin: ["https://job-portal-web-application-omega.vercel.app"],
     method: ["GET", "POST", "DELETE", "PUT"],
     credentials: true,
   })
