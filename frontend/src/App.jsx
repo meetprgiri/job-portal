@@ -25,7 +25,7 @@ const App = () => {
         const response = await axios.get(
           "https://job-portal-api-coral.vercel.app/api/v1/user/getuser",
           {
-            withCredentials: true,
+            withCredentials: false,
           }
         );
         setUser(response.data.user);
@@ -42,9 +42,9 @@ const App = () => {
       <BrowserRouter>
         <Navbar />
         <Routes>
+          <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
-          <Route path="/" element={<Home />} />
           <Route path="/job/getall" element={<Jobs />} />
           <Route path="/job/:id" element={<JobDetails />} />
           <Route path="/application/:id" element={<Application />} />

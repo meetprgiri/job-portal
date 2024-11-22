@@ -17,7 +17,7 @@ app.use(
   cors({
     origin: ["https://job-portal-web-application-omega.vercel.app"],
     method: ["GET", "POST", "DELETE", "PUT"],
-    credentials: true,
+    credentials: false,
   })
 );
 
